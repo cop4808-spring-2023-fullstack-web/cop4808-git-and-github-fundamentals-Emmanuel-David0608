@@ -48,63 +48,36 @@ button {
     color: black;
 }
 
+/*Styling for the new buttons*/
+.trig, .exp {
+    background-color: #67e6dc;
+}
+.trig:active, .exp:active{
+    background-color: #7efff5;
+}
+
+.operator, .equals {
+    background-color: #ff9f1a;
+}
+.operator:active, .equals:active{
+    background-color: #ffaf40;
+}
+
+.clear, .sign, .percent{
+    background-color: #fff200;
+}
+.clear:active, .sign:active, .percent:active{
+    background-color: #fffa65;
+}
+
+.operand, .decimal{
+background-color: #3ae374;
+}
+.operand:active, .decimal:active{
+background-color: #32ff7e;
+}
+/*Styling for the new buttons*/
 
 #zero {
     grid-column: span 2;
-}
-
-.operator {
-    background-color: #FF8F1F;    
-}
-
-.operator:focus {
-    background-color: #ffc183;
-}
-
-.equals {
-    background-color: #FF8F1F;
-}
-
-.equals:active {
-    background-color: #ffc183;
-}
-
-.operand {
-    background-color: #217C7E;
-}
-
-.operand:active {
-    background-color: #33b9bb;
-}
-
-.decimal {
-    background-color: #217C7E;
-}
-
-.decimal:active {
-    background-color: #33b9bb;
-}
-
-.clear {
-    background-color: dodgerblue;
-}
-
-.clear:active {
-    background-color: rgb(123, 189, 255);
-}
-
-.sign {
-    background-color: dodgerblue;
-}
-
-.sign:active {
-    background-color: rgb(123, 189, 255);
-}
-
-.percent {
-    background-color: dodgerblue;
-}
-
-.percent:active {
-    background-color: rgb(123, 189, 255);
 }
