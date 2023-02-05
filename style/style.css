@@ -49,10 +49,10 @@ button {
 }
 
 /*Styling for the new buttons*/
-.trig, .exp {
+.sin, .cos, .tan, .ln {
     background-color: #67e6dc;
 }
-.trig:active, .exp:active{
+.sin:active, .cos:active, .tan:active, .ln:active{
     background-color: #7efff5;
 }
 

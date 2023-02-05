@@ -23,27 +23,41 @@ updateDisplay();
 
 function clickButton() {
     for(let i = 0; i < buttons.length; i++) {
-        buttons[i].addEventListener('click', function() {
-            if(buttons[i].classList.contains('operand')) {
+        buttons[i].addEventListener('click', function () {
+            if (buttons[i].classList.contains('operand')) {
                 inputOperand(buttons[i].value);
                 updateDisplay();
-            } else if(buttons[i].classList.contains('operator')) {
+            } else if (buttons[i].classList.contains('operator')) {
                 inputOperator(buttons[i].value);
-            } else if(buttons[i].classList.contains('equals')) {
+            } else if (buttons[i].classList.contains('equals')) {
                 inputEquals();
                 updateDisplay();
-            } else if(buttons[i].classList.contains('decimal')) {
+            } else if (buttons[i].classList.contains('decimal')) {
                 inputDecimal(buttons[i].value);
                 updateDisplay();
-            } else if(buttons[i].classList.contains('percent')) {
+            } else if (buttons[i].classList.contains('percent')) {
                 inputPercent(displayValue);
                 updateDisplay();
-            } else if(buttons[i].classList.contains('sign')) {
+            } else if (buttons[i].classList.contains('sign')) {
                 inputSign(displayValue);
                 updateDisplay();
-            } else if(buttons[i].classList.contains('clear'))
+            } else if (buttons[i].classList.contains('clear')) {
                 clearDisplay();
                 updateDisplay();
+
+            //These are the function implimentations for the new buttons
+            } else if (buttons[i].classList.contains('sin')){
+                Sin(displayValue);
+                updateDisplay();
+            } else if (buttons[i].classList.contains('cos')){
+                Cos(displayValue);
+                updateDisplay();
+            } else if (buttons[i].classList.contains('tan')){
+                Tan(displayValue);
+                updateDisplay();
+            } else if (buttons[i].classList.contains('ln'))
+                Ln(displayValue);
+                updateDisplay(); 
         }
     )}
 }
@@ -164,21 +178,35 @@ function inputBackspace() {
 }
 
 function operate(x, y, op) {
-    if(op === '+') {
+    if (op === '+') {
         return x + y;
-    } else if(op === '-') {
+    } else if (op === '-') {
         return x - y;
-    } else if(op === '*') {
+    } else if (op === '*') {
         return x * y;
-    } else if(op === '/') {
-        if(y === 0) {
+    } else if (op === '/') {
+        if (y === 0) {
             return 'lmao';
         } else {
-        return x / y;
+            return x / y;
         }
     }
 }
 
 function roundAccurately(num, places) {
     return parseFloat(Math.round(num + 'e' + places) + 'e-' + places);
+}
+
+//New functions for the new buttons
+function Sin(num) {
+    displayValue = Math.sin(num).toFixed(7);
+}
+function Cos(num) {
+    displayValue = Math.cos(num).toFixed(7);
+}
+function Tan(num) {
+    displayValue = Math.tan(num).toFixed(7);
+}
+function Ln(num) {
+    displayValue = Math.log(num).toFixed(7);
 }
